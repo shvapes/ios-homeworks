@@ -13,7 +13,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         if let myView = Bundle.main.loadNibNamed("ProfileView", owner: nil)?.first as? ProfileView {
-            myView.frame = CGRect(x: 16, y: 150, width: 350, height: 400)
+            myView.frame = CGRect(x: view.frame.origin.x, y: 20, width: view.frame.width - 20, height: view.frame.height)
             view.addSubview(myView)
         }
 
